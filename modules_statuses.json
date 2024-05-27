@@ -1,0 +1,11 @@
+{
+    "Subscribers": true,
+    "Countrey": true,
+    "Specialties": true,
+    "Countries": true,
+    "Advertisements": true,
+    "Blogs": true,
+    "Subscriptions": true,
+    "Sms": true,
+    "OTP": true
+}

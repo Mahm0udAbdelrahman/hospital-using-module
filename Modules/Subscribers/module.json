@@ -1,0 +1,23 @@
+{
+    "name": "Subscribers",
+    "label": "Subscribers",
+    "alias": "subscribers",
+    "description": "manage all subscribers",
+    "keywords": ["subscribers"],
+    "priority": 0,
+    "providers": [
+        "Modules\\Subscribers\\Providers\\SubscribersServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "menus": [
+        {
+            "icon": "fas fa-circle",
+            "name": "Subscribers",
+            "route": "subscribers.index",
+            "permission": "read subscribers"
+        }
+    ],
+    "permissions": ["subscribers"]
+}

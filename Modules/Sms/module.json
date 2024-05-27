@@ -1,0 +1,24 @@
+{
+    "name": "Sms",
+    "label": "Sms",
+    "alias": "sms",
+    "description": "manage all posts",
+    "keywords": ["posts"],
+    "priority": 0,
+    "providers": [
+        "Modules\\Sms\\Providers\\SmsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "menus": [
+        {
+            "icon": "fas fa-circle",
+            "name": "Sms",
+            "route": "sms.index",
+            "permission": "read sms"
+        }
+    ],
+    "permissions": ["sms"]
+}
+

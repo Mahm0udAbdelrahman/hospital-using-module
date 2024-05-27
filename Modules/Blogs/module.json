@@ -1,0 +1,25 @@
+
+{
+    "name": "Blogs",
+    "label": "Blogs",
+    "alias": "blogs",
+    "description": "manage all posts",
+    "keywords": ["posts"],
+    "priority": 0,
+    "providers": [
+        "Modules\\Blogs\\Providers\\BlogsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "menus": [
+        {
+            "icon": "fas fa-circle",
+            "name": "Blogs",
+            "route": "blogs.index",
+            "permission": "read blogs"
+        }
+    ],
+    "permissions": ["blogs"]
+}
+

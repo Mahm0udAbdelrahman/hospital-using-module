@@ -1,0 +1,25 @@
+
+{
+    "name": "Countries",
+    "label": "Countries",
+    "alias": "countries",
+    "description": "manage all posts",
+    "keywords": ["posts"],
+    "priority": 0,
+    "providers": [
+        "Modules\\Countries\\Providers\\CountriesServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "menus": [
+        {
+            "icon": "fas fa-circle",
+            "name": "Countries",
+            "route": "countries.index",
+            "permission": "read countries"
+        }
+    ],
+    "permissions": ["countries"]
+}
+

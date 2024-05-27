@@ -1,0 +1,24 @@
+{
+    "name": "Specialties",
+    "label": "Specialties",
+    "alias": "specialties",
+    "description": "manage all posts",
+    "keywords": ["posts"],
+    "priority": 0,
+    "providers": [
+        "Modules\\Specialties\\Providers\\SpecialtiesServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "menus": [
+        {
+            "icon": "fas fa-circle",
+            "name": "Specialties",
+            "route": "specialties.index",
+            "permission": "read specialties"
+        }
+    ],
+    "permissions": ["specialties"]
+}
+

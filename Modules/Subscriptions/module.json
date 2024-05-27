@@ -1,0 +1,23 @@
+{
+    "name": "Subscriptions",
+    "label": "Subscriptions",
+    "alias": "subscriptions",
+    "description": "manage all subscriptions",
+    "keywords": ["subscriptions"],
+    "priority": 0,
+    "providers": [
+        "Modules\\Subscriptions\\Providers\\SubscriptionsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "menus": [
+        {
+            "icon": "fas fa-circle",
+            "name": "Subscriptions",
+            "route": "subscriptions.index",
+            "permission": "read subscriptions"
+        }
+    ],
+    "permissions": ["subscriptions"]
+}

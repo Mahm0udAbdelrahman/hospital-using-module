@@ -1,0 +1,24 @@
+{
+    "name": "Advertisements",
+    "label": "Advertisements",
+    "alias": "advertisements",
+    "description": "manage all posts",
+    "keywords": ["posts"],
+    "priority": 0,
+    "providers": [
+        "Modules\\Advertisements\\Providers\\AdvertisementsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "menus": [
+        {
+            "icon": "fas fa-circle",
+            "name": "Advertisements",
+            "route": "advertisements.index",
+            "permission": "read advertisements"
+        }
+    ],
+    "permissions": ["advertisements"]
+}
+

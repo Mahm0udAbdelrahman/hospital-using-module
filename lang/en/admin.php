@@ -1,0 +1,45 @@
+<?php
+
+return [
+    'specialty' => "specialty",
+    "subspecialty" => "subspecialty",
+    'image' => 'image',
+    'title' => 'title',
+    'start_date' => 'start_date',
+    'end_date'=> 'end_date',
+    'number_of_cleats' => 'number_of_cleats',
+    'advertisement_link'=>'advertisement_link',
+   'add'   => 'add',
+   'User'   => 'User',
+   'Profile'   => 'Profile',
+   'Name'   => 'Name',
+   'Country'   => 'Country',
+   'Email'   => 'Email',
+   'Password'   => 'Password',
+   'Languages'   => 'Languages',
+   'Dashboard'   => 'Dashboard',
+   'logout'   => 'Logout',
+   'ACCESS'   => 'ACCESS',
+   'Module'   => 'Module',
+   'FileManager'   => 'File Manager',
+   'Setting'   => 'Setting',
+   'Permission'   => 'Permission',
+   'Role'   => 'Role',
+   'Guard'   => 'Guard',
+   'notice'   => 'notice',
+
+
+   'Areyousureyouwanttologout'   => 'Are you sure you want to log out?',
+   'Areyousuretodelete'   => 'Are you sure to delete?',
+   'Clicktoselectafile'   => 'Click to select a file',
+
+   'Cancel'   => 'Cancel',
+   'ok'   => 'ok',
+   'Updated'   => 'Updated',
+   'Action'   => 'Action',
+   'save'   => 'save',
+   'delete'   => 'delete',
+   'Reload'   => 'Reload',
+   'Moreinfo'   => 'More info',
+
+];

@@ -40,7 +40,7 @@ class AdvertisementsController extends Controller
     {
         $request->validate([
             'title'=> 'required|string',
-            'image'=> 'nullable',
+            'image'=> 'required|image',
             'start_date'=> 'required|string',
             'end_date'=> 'required|string',
             'number_of_cleats'=> 'required|string',
@@ -50,7 +50,7 @@ class AdvertisementsController extends Controller
        $advertisement = Advertisement::create([
 
             'title'=> $request->title,
-            'image'=> 'nullable',
+            'image'=> $request->image ,
             'start_date'=> $request->start_date,
             'end_date'=> $request->end_date,
             'number_of_cleats'=> $request->number_of_cleats,
@@ -108,7 +108,7 @@ class AdvertisementsController extends Controller
 
        $advertisement->update([
             'title'=> $request->title,
-            'image'=> 'nullable',
+            'image'=> $request->image ,
             'start_date'=> $request->start_date,
             'end_date'=> $request->end_date,
             'number_of_cleats'=> $request->number_of_cleats,

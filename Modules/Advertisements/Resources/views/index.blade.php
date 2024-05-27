@@ -58,7 +58,7 @@
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $i->title }}</td>
-                                                <td><img src="{{ $i->image }}"></td>
+                                                <td><img height="100" width="100" src="{{ $i->image }}"></td>
                                                 <td>{{ $i->start_date }}</td>
                                                 <td>{{ $i->end_date }}</td>
                                                 <td>{{ $i->number_of_cleats }}</td>
@@ -118,7 +118,12 @@
                     },
                     success: function(data) {
                         var data = data.data;
-                        $("#name").val(data.name);
+                        $("#title").val(data.title);
+                        $("#image").val(data.image);
+                        $("#start_date").val(data.start_date);
+                        $("#end_date").val(data.end_date);
+                        $("#number_of_cleats").val(data.number_of_cleats);
+                        $("#advertisement_link").val(data.advertisement_link);
                         $("#id").val(data.id);
                         $('#modal-loading').modal('hide');
                         $('#modal-edit').modal({
@@ -164,7 +169,7 @@
                             <label>@lang('admin.title')</label>
                             <div class="input-group">
                                 <input type="text" class="form-control @error('title') is-invalid @enderror"
-                                    placeholder="title" name="title" value="{{ old('title') }}">
+                                    placeholder="title" id="title" name="title" value="{{ old('title') }}">
                                 @error('title')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -175,7 +180,7 @@
                             <label>@lang('admin.image')</label>
                             <div class="input-group">
                                 <input type="file" class="form-control @error('image') is-invalid @enderror"
-                                    placeholder="image" name="image" value="{{ old('image') }}">
+                                    placeholder="image" id="image"  name="image" value="{{ old('image') }}">
                                 @error('image')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -186,7 +191,7 @@
                             <label>@lang('admin.start_date')</label>
                             <div class="input-group">
                                 <input type="date" class="form-control @error('start_date') is-invalid @enderror"
-                                    placeholder="start_date" name="start_date" value="{{ old('start_date') }}">
+                                    placeholder="start_date" id="start_date" name="start_date" value="{{ old('start_date') }}">
                                 @error('start_date')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -197,7 +202,7 @@
                             <label>@lang('admin.end_date')</label>
                             <div class="input-group">
                                 <input type="date" class="form-control @error('end_date') is-invalid @enderror"
-                                    placeholder="end_date" name="end_date" value="{{ old('end_date') }}">
+                                    placeholder="end_date" id="end_date" name="end_date" value="{{ old('end_date') }}">
                                 @error('end_date')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -208,7 +213,7 @@
                             <label>@lang('admin.number_of_cleats')</label>
                             <div class="input-group">
                                 <input type="text" class="form-control @error('number_of_cleats') is-invalid @enderror"
-                                    placeholder="number_of_cleats" name="number_of_cleats" value="{{ old('number_of_cleats') }}">
+                                    placeholder="number_of_cleats" id="number_of_cleats" name="number_of_cleats" value="{{ old('number_of_cleats') }}">
                                 @error('number_of_cleats')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror

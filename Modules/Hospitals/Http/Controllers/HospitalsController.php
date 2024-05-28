@@ -12,6 +12,15 @@ class HospitalsController extends Controller
      * Display a listing of the resource.
      * @return Renderable
      */
+
+    public function __construct()
+    {
+        $this->middleware(['permisson:read doctors'])->only('index');
+        $this->middleware(['permisson:create doctors'])->only('store');
+        $this->middleware(['permisson:read doctors'])->only('show');
+        $this->middleware(['permisson:update doctors'])->only('update');
+        $this->middleware(['permisson:delete doctors'])->only('destroy');
+    }
     public function index()
     {
         return view('hospitals::index');

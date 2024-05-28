@@ -2,9 +2,10 @@
 
 namespace Modules\Hospitals\Http\Controllers;
 
-use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Modules\Hospitals\Entities\Doctor;
+use Illuminate\Contracts\Support\Renderable;
 
 class DoctorsController extends Controller
 {
@@ -14,7 +15,8 @@ class DoctorsController extends Controller
      */
     public function index()
     {
-        return view('hospitals::index');
+        $data = Doctor::all();
+        return view('hospitals::doctors.index',compact('data'));
     }
 
     /**
@@ -23,7 +25,7 @@ class DoctorsController extends Controller
      */
     public function create()
     {
-        return view('hospitals::create');
+        return view('hospitals::doctors.create');
     }
 
     /**
@@ -33,7 +35,13 @@ class DoctorsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string',
+            'email' => 'required|email',
+            'address' => 'required|string',
+            'age' => 'required|string',
+
+        ]);
     }
 
     /**

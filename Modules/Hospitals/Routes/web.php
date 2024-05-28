@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Modules\Hospitals\Http\Controllers\DoctorsController;
 use Modules\Hospitals\Http\Controllers\HospitalsController;
 
 /*
@@ -26,6 +27,6 @@ Route::middleware('auth')->prefix('admin/hospitals')->group(function() {
         Route::delete('/', 'destroy')->middleware(['permisson:delete hospitals'])->name('hospitals.destroy');
     });
     Route::resources([
-        'doctors'=>
+        'doctors'=> DoctorsController::class,
     ]);
 });

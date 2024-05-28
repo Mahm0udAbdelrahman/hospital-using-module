@@ -7,15 +7,15 @@
       <div class="mdc-list-group">
         <nav class="mdc-list mdc-drawer-menu">
           <div class="mdc-list-item mdc-drawer-item">
-            <a class="mdc-drawer-link" href="index.html">
+            <a class="mdc-drawer-link" href="{{ route('hospitals.index') }}">
               <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">desktop_mac</i>
               Dashboard
             </a>
           </div>
           <div class="mdc-list-item mdc-drawer-item">
-            <a class="mdc-drawer-link" href="pages/forms/basic-forms.html">
+            <a class="mdc-drawer-link" href="{{ route('doctors.index') }}">
               <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">track_changes</i>
-              Forms
+              Doctors
             </a>
           </div>
           <div class="mdc-list-item mdc-drawer-item" href="#" data-toggle="expansionPanel" target-panel="ui-sub-menu">

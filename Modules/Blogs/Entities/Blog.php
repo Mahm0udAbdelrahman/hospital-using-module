@@ -23,6 +23,23 @@ class Blog extends Model
     {
         return $this->belongsTo(Section::class,'section_id','id');
     }
+    protected function getImageAttribute($value)
+    {
+        if ($value) {
+            return asset('media/blog' . '/' . $value);
+        } else {
+            return asset('media/blog/default.png');
+        }
+    }
+
+    public function setImageAttribute($value)
+    {
+        if ($value) {
+            $imageName = time() . '.' . $value->getClientOriginalExtension();
+            $value->move(public_path('media/blog/'), $imageName);
+            $this->attributes['image'] = $imageName;
+        }
+    }
 
 
 }

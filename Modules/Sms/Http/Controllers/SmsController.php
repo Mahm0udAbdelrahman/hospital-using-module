@@ -17,7 +17,10 @@ class SmsController extends Controller
     public function index(Request $request)
     {
         $title = "Sms";
-        return view("sms::index", compact("title"));
+        // return view("sms::index", compact("title"));
+        // return view("sms::sendsms", compact("title"));
+        return view("sms::smses", compact("title"));
+
 
 
 
@@ -51,7 +54,7 @@ class SmsController extends Controller
         );
 
 
-        
+
         $message = $response->current();
 
         if ($message->getStatus() == 0) {

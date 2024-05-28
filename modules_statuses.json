@@ -7,5 +7,6 @@
     "Blogs": true,
     "Subscriptions": true,
     "Sms": true,
-    "OTP": true
+    "OTP": true,
+    "Hospitals": true
 }

@@ -60,7 +60,7 @@
                                                 <td>{{ $i->section->name }}</td>
                                                 <td>{{ $i->title }}</td>
                                                 <td>{!! $i->description !!}</td>
-                                                <td><img src="{{ $i->image }}"></td>
+                                                <td><img height="100" width="100" src="{{ $i->image }}"></td>
                                                 <td>{{ $i->date }}</td>
                                                 <td>{{ $i->editor }}</td>
                                                 <td>{{ $i->updated_at }}</td>

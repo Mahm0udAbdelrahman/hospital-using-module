@@ -1,0 +1,25 @@
+
+{
+    "name": "Hospitals",
+    "label": "Hospitals",
+    "alias": "hospitals",
+    "description": "manage all posts",
+    "keywords": ["posts"],
+    "priority": 0,
+    "providers": [
+        "Modules\\Hospitals\\Providers\\HospitalsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "menus": [
+        {
+            "icon": "fas fa-circle",
+            "name": "Hospitals",
+            "route": "hospitals.index",
+            "permission": "read hospitals"
+        }
+    ],
+    "permissions": ["hospitals"]
+}
+

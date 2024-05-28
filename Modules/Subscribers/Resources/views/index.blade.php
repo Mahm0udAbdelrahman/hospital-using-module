@@ -66,7 +66,7 @@
                                                 <td>{{ $i->phone }}</td>
                                                 <td>{{ $i->facebook }}</td>
                                                 <td>{{ $i->instagram }}</td>
-                                                <td><img src="{{ $i->image }}"</td>
+                                                <td><img width="100" height="100" src="{{ $i->image }}"</td>
                                                 <td>{{ $i->updated_at }}</td>
                                                 @canany(['update subscribers', 'delete subscribers'])
                                                     <td>

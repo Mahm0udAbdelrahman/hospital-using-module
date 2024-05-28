@@ -24,4 +24,21 @@ class Subscriber extends Model
     {
         return SubscriberFactory::new();
     }
+    protected function getImageAttribute($value)
+    {
+        if ($value) {
+            return asset('media/subscriber' . '/' . $value);
+        } else {
+            return asset('media/subscriber/default.png');
+        }
+    }
+
+    public function setImageAttribute($value)
+    {
+        if ($value) {
+            $imageName = time() . '.' . $value->getClientOriginalExtension();
+            $value->move(public_path('media/subscriber/'), $imageName);
+            $this->attributes['image'] = $imageName;
+        }
+    }
 }

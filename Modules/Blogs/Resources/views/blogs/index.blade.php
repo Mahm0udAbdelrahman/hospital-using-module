@@ -57,7 +57,7 @@
                                         @foreach ($data as $i)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
-                                                <td>{{ $i->section->name }}</td>
+                                                <td>{{ $i->section}}</td>
                                                 <td>{{ $i->title }}</td>
                                                 <td>{!! $i->description !!}</td>
                                                 <td><img height="100" width="100" src="{{ $i->image }}"></td>

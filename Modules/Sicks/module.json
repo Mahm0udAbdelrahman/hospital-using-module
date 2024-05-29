@@ -1,0 +1,25 @@
+
+{
+    "name": "Sicks",
+    "label": "Sicks",
+    "alias": "sicks",
+    "description": "manage all posts",
+    "keywords": ["posts"],
+    "priority": 0,
+    "providers": [
+        "Modules\\Sicks\\Providers\\SicksServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "menus": [
+        {
+            "icon": "fas fa-circle",
+            "name": "Sicks",
+            "route": "sicks.index",
+            "permission": "read sicks"
+        }
+    ],
+    "permissions": ["sicks"]
+}
+

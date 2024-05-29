@@ -41,7 +41,7 @@
                     <div class="modal-body">
                         <form action="{{ route('blogs.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
-                            <div class="form-group">
+                            {{--  <div class="form-group">
                                 <label for="email">Choose Country</label>
                                 <select class="form-control custom-select mt-15" name="section_id" id="">
                                     <option value="">No Category</option>
@@ -52,7 +52,21 @@
                             </div>
                             @error('section_id')
                                 <span class="text-danger">{{ $message }}</span>
-                            @enderror
+                            @enderror  --}}
+
+                            <div class="input-group">
+                                <label>@lang('admin.section')</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control @error('section') is-invalid @enderror"
+                                        placeholder="section" name="section" value="{{ old('section') }}">
+                                    @error('section')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+
+
+
 
                             <div class="input-group">
                                 <label>@lang('admin.title')</label>

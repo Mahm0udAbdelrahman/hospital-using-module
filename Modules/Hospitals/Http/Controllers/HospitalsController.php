@@ -15,11 +15,11 @@ class HospitalsController extends Controller
 
     public function __construct()
     {
-        $this->middleware(['permisson:read doctors'])->only('index');
-        $this->middleware(['permisson:create doctors'])->only('store');
-        $this->middleware(['permisson:read doctors'])->only('show');
-        $this->middleware(['permisson:update doctors'])->only('update');
-        $this->middleware(['permisson:delete doctors'])->only('destroy');
+        $this->middleware(['permisson:read hospitals'])->only('index');
+        $this->middleware(['permisson:create hospitals'])->only('store');
+        $this->middleware(['permisson:read hospitals'])->only('show');
+        $this->middleware(['permisson:update hospitals'])->only('update');
+        $this->middleware(['permisson:delete hospitals'])->only('destroy');
     }
     public function index()
     {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Verification;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
@@ -45,14 +46,19 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         $request->validate([
-            'email' => 'required',
-            'password' => 'required',
+            'phone' => 'required',
+            // 'password' => 'required',
             // 'g-recaptcha-response' => 'required'
         ]);
 
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->only('phone');
         if (Auth::attempt($credentials, true)) {
-            return to_route('dashboard');
+            // return to_route('dashboard');
+            Verification::create([
+                'user_id'=>,
+                'code'=>
+            ]);
+            
         }
         throw ValidationException::withMessages([
             $this->username() => [trans('auth.failed')],

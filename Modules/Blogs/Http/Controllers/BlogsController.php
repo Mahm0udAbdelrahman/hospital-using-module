@@ -42,7 +42,7 @@ class BlogsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'section_id' => "required|string",
+            'section' => "required|string",
             'title' => "required|string",
             'description' => "required|string",
             'image' => "required|image",
@@ -93,7 +93,7 @@ class BlogsController extends Controller
     public function update(Request $request, Blog $blog)
     {
         $request->validate([
-            'section_id' => "nullable|string",
+            'section' => "nullable|string",
             'title' => "nullable|string",
             'description' => "nullable|string",
             'image' => "nullable|image",

@@ -1,8 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Modules\Hospitals\Http\Controllers\SicksController;
 use Modules\Hospitals\Http\Controllers\DoctorsController;
+use Modules\Hospitals\Http\Controllers\RequestsController;
 use Modules\Hospitals\Http\Controllers\HospitalsController;
+use Modules\Hospitals\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,5 +31,10 @@ Route::middleware('auth')->prefix('admin/hospitals')->group(function() {
     });
     Route::resources([
         'doctors'=> DoctorsController::class,
+        'sicks'=> SicksController::class,
+        'requests'=> RequestsController::class,
+      
     ]);
+    Route::get('login',[LoginController::class,'index']);
+
 });

@@ -1,0 +1,24 @@
+{
+    "name": "Doctors",
+    "label": "Doctors",
+    "alias": "doctors",
+    "description": "manage all posts",
+    "keywords": ["posts"],
+    "priority": 0,
+    "providers": [
+        "Modules\\Doctors\\Providers\\DoctorsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "menus": [
+        {
+            "icon": "fas fa-circle",
+            "name": "Doctors",
+            "route": "doctors.index",
+            "permission": "read doctors"
+        }
+    ],
+    "permissions": ["doctors"]
+}
+

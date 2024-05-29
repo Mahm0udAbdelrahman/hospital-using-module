@@ -8,5 +8,7 @@
     "Subscriptions": true,
     "Sms": true,
     "OTP": true,
-    "Hospitals": true
+    "Hospitals": true,
+    "DDoctors": true,
+    "Doctors": true
 }

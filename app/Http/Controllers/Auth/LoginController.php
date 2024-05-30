@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Register_specialist;
+use App\Models\User;
 use App\Models\Verification;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -51,18 +53,30 @@ class LoginController extends Controller
             // 'g-recaptcha-response' => 'required'
         ]);
 
-        $credentials = $request->only('phone');
-        if (Auth::attempt($credentials, true)) {
+        // $credentials = $request->only('phone');
+        // $verification = Verification::where('code',$request->input('code'))->first();
+        // $verification->generateCode();
+        $admin=User::where('phone',$request->phone)->first();
+        if (isset($admin)) {
             // return to_route('dashboard');
+            // Verification::create([
+            //     'user_id'=>,
+            //     'code'=>
+            // ]);
+
+            $code= rand(1000,9999);
             Verification::create([
-                'user_id'=>,
-                'code'=>
+                'user_id'=>$admin->id,
+                'code'=>$code
             ]);
-            
+            return redirect()->route("verification.index");
+
+        }else{
+            throw ValidationException::withMessages([
+                $this->username() => [trans('auth.failed')],
+            ]);
         }
-        throw ValidationException::withMessages([
-            $this->username() => [trans('auth.failed')],
-        ]);
+
     }
 
     protected function authenticated(Request $request, $user)

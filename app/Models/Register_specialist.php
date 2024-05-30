@@ -17,4 +17,6 @@ class Register_specialist extends Model
         'address'
     ];
 
+
+
 }

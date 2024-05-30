@@ -18,21 +18,25 @@ class UserSeeder extends Seeder
         $superadmin = User::create([
             'name'      => 'Superadmin',
             'email'     => 'superadmin@gmail.com',
-            'password'  => bcrypt('12345678')
+            'password'  => bcrypt('12345678'),
+            'phone' => '+201146613334'
         ]);
         $superadmin->assignRole('superadmin');
 
         $admin = User::create([
             'name'      => 'Admin',
             'email'     => 'admin@gmail.com',
-            'password'  => bcrypt('12345678')
+            'password'  => bcrypt('12345678'),
+            'phone' => '13156456456',
         ]);
         $admin->assignRole('admin');
 
         $operator = User::create([
             'name'      => 'Operator',
             'email'     => 'operator@gmail.com',
-            'password'  => bcrypt('12345678')
+            'password'  => bcrypt('12345678'),
+            'phone' => '56456456456',
+
         ]);
         $operator->assignRole('operator');
     }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\VerificationCodeController;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -33,10 +34,10 @@ Auth::routes([
     'reset'     => false,
     'confirm'   => false
 ]);
+Route::resource('verification',VerificationCodeController::class);
+Route::get('/home', [DashboardController::class, 'index'])->name('home');
 
-Route::middleware(['auth'])->get('/home', [DashboardController::class, 'index'])->name('home');
-
-Route::prefix('admin')->middleware(['auth'])->group(function () {
+Route::prefix('admin')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('admin');
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 

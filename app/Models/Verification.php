@@ -16,4 +16,13 @@ class Verification extends Model
     public function user(){
         return $this->belongsTo(User::class,'user_id');
     }
+    // public function generateCode()
+    // {
+    //     $this->timestamps = false;
+
+    //     $this->save();
+
+
+    // }
+
 }
